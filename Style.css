@@ -226,3 +226,50 @@ body {
         color: #4F4F4F;
 
     }
+/* --- PHẦN BỔ SUNG CHO ĐIỆN THOẠI (RESPONSIVE) --- */
+@media screen and (max-width: 768px) {
+    /* 1. Bỏ cố định header để menu không che nội dung khi nó dài ra */
+    header {
+        position: relative; 
+        height: auto;
+    }
+
+    /* 2. Sắp xếp logo và menu theo chiều dọc */
+    .menu {
+        flex-direction: column; /* Xếp dọc logo và danh sách menu */
+        padding: 10px 0;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 15px; /* Tạo khoảng cách giữa logo và menu */
+    }
+
+    /* 3. Chuyển các mục menu thành danh sách dọc */
+    .menu ul {
+        flex-direction: column; /* Xếp các chữ menu thành hàng dọc */
+        width: 100%;
+    }
+
+    .menu li {
+        margin: 5px 0; /* Khoảng cách giữa các dòng menu */
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1); /* Kẻ dòng mờ ngăn cách cho đẹp (tuỳ chọn) */
+    }
+
+    .menu a {
+        display: block; /* Để bấm được vào toàn bộ chiều ngang */
+        padding: 10px;
+    }
+
+    /* 4. Giảm khoảng cách đẩy xuống của main vì header không còn fixed */
+    main {
+        padding-top: 10px; 
+    }
+    
+    /* 5. Chỉnh lại kích thước chữ tiêu đề trên điện thoại cho đỡ to */
+    #trang-chu h1 {
+        font-size: 2rem;
+    }
+}
