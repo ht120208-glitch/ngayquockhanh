@@ -41,7 +41,7 @@ body {
         margin: 0 15px; 
     }
     .menu a {
-        display: inline;
+        display: block;
         padding: 15px 20px;
         text-decoration: none;
         color: #ffff00;
